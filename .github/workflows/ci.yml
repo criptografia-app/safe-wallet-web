@@ -1,0 +1,9 @@
+name: CI
+on:
+  push:
+    branches: [main, master, dev] # Triggers on common default branches
+  pull_request:
+jobs:
+  run-ai:
+    uses: criptografia-app/ops-center/.github/workflows/ai-pipeline.yml@main
+    secrets: inherit
